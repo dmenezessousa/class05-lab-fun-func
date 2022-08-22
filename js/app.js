@@ -1,4 +1,5 @@
 "use strict";
+
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
@@ -15,7 +16,7 @@ function sum(a, b, c) {
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+// testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -35,7 +36,7 @@ function multiply(a, b, c) {
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5, 9);
+// testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,14 +53,26 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  return [sum(a, b, c), multiply(a, b, c), a + " and " + b + " and " + c + " sum to " + sum(a, b, c) + ".", "The product of " + a + " and " + b + " and " + c + " is " + multiply(a, b, c) + "."];
+  return [
+    sum(a, b, c),
+    multiply(a, b, c),
+    a + " and " + b + " and " + c + " sum to " + sum(a, b, c) + ".",
+    "The product of " +
+      a +
+      " and " +
+      b +
+      " and " +
+      c +
+      " is " +
+      multiply(a, b, c) +
+      ".",
+  ];
   //eslint-disable-line
- 
 }
 // console.log(sumAndMultiply(4, 7, 5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4, 7, 5);
+// testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -78,11 +91,25 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
+  let result = sum(sumArr[0], sumArr[1], sumArr[2]);
+  return [
+    result,
+    sumArr[0] +
+      "," +
+      sumArr[1] +
+      "," +
+      sumArr[2] +
+      " was passed in as an array of numbers, and " +
+      result +
+      " is their sum.",
+  ];
 }
+
+console.log(sumArray(testArray));
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
