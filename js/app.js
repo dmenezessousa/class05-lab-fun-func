@@ -29,9 +29,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b, c) {
+function multiply(a, b, c, d, e) {
   //eslint-disable-line
-  const product = a * b * c;
+  const product = a * b * c * d * e;
   return product;
 }
 
@@ -140,7 +140,7 @@ function multiplyArray(multArr) {
       ".",
   ];
 }
-console.log(multiplyArray(testArray));
+// console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
@@ -167,9 +167,26 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+    let result = multiply(dynamicArray[0], dynamicArray[1], dynamicArray[2], dynamicArray[3], dynamicArray[4]);
+    return [
+        result,
+        "The numbers " +
+        dynamicArray[0] +
+        "," +
+        dynamicArray[1] +
+        "," +
+        dynamicArray[2] +
+        "," +
+        dynamicArray[3] +
+        "," +
+        dynamicArray[4] +
+        " have a product of " +
+        result +
+        ".",
+    ];
 }
-
+console.log(multiplyAnyArray(testDynamicArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
