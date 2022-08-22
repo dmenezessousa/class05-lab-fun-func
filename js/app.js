@@ -130,7 +130,7 @@ function multiplyArray(multArr) {
   return [
     result,
     "The numbers " +
-    multArr[0] +
+      multArr[0] +
       "," +
       multArr[1] +
       "," +
@@ -142,7 +142,7 @@ function multiplyArray(multArr) {
 }
 // console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+// testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -167,23 +167,29 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
-    let result = multiply(dynamicArray[0], dynamicArray[1], dynamicArray[2], dynamicArray[3], dynamicArray[4]);
-    return [
-        result,
-        "The numbers " +
-        dynamicArray[0] +
-        "," +
-        dynamicArray[1] +
-        "," +
-        dynamicArray[2] +
-        "," +
-        dynamicArray[3] +
-        "," +
-        dynamicArray[4] +
-        " have a product of " +
-        result +
-        ".",
-    ];
+  let result = multiply(
+    dynamicArray[0],
+    dynamicArray[1],
+    dynamicArray[2],
+    dynamicArray[3],
+    dynamicArray[4]
+  );
+  return [
+    result,
+    "The numbers " +
+      dynamicArray[0] +
+      "," +
+      dynamicArray[1] +
+      "," +
+      dynamicArray[2] +
+      "," +
+      dynamicArray[3] +
+      "," +
+      dynamicArray[4] +
+      " have a product of " +
+      result +
+      ".",
+  ];
 }
 console.log(multiplyAnyArray(testDynamicArray));
 // Here is the test for multiplyArray(); uncomment it to run it
